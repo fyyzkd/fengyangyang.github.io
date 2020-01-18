@@ -1,35 +1,11 @@
-<footer class='c-footer'>
-  <div class='o-grid'>
-    <div class='o-grid__col o-grid__col--full'>
-
-      <ul class='o-plain-list c-social-nav u-text-center'>
-        <li class='c-social-nav__item'>
-          <a href='{{ site.twitter }}' target='_blank'>
-            <span class='c-social-nav__icon' data-icon='ei-sc-twitter' data-size='s'></span>
-          </a>
-        </li>
-        <li class='c-social-nav__item'>
-          <a href='{{ site.facebook }}' target='_blank'>
-            <span class='c-social-nav__icon' data-icon='ei-sc-facebook' data-size='s'></span>
-          </a>
-        </li>
-        <li class='c-social-nav__item'>
-          <a href='{{ site.instagram }}' target='_blank'>
-            <span class='c-social-nav__icon' data-icon='ei-sc-instagram' data-size='s'></span>
-          </a>
-        </li>
-        <li class='c-social-nav__item'>
-          <a href='{{ site.github }}' target='_blank'>
-            <span class='c-social-nav__icon' data-icon='ei-sc-github' data-size='s'></span>
-          </a>
-        </li>
-        <li class='c-social-nav__item'>
-          <a href='mailto:{{ site.email }}' target='_blank'>
-            <span class='c-social-nav__icon' data-icon='ei-envelope' data-size='s'></span>
-          </a>
-        </li>
-      </ul>
-
-    </div>
-  </div>
+<footer class="g-footer">
+  <section>{{ site.title }} ©
+  {% assign current = "now" | date: "%Y" | plus: 0%}
+  {% unless site.footer.since and site.footer.since == current %}
+    {{ site.footer.since }}
+    -
+  {% endunless %}
+  {{ current }}
+  </section>
+  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a></section>
 </footer>
